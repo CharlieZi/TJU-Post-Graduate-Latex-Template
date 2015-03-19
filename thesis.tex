@@ -1,0 +1,58 @@
+%%==================================================
+%% thesis.tex
+%%==================================================
+
+% 双面打印
+\documentclass[master, macfonts, openright, cs4size]{TJUgraduates} 
+% \documentclass[bachelor, adobefonts, openright, cs4size]{TJUgraduates} 
+% \documentclass[master]{TJUgraduates} 
+% \documentclass[%
+%   bachelor|master|doctor 
+%   adobefonts, winfonts  	% 修改 /ctex 中的adobefonts, 改为mac默认中文字体
+%   openany|openright 		% 单面打印，双面打印(默认)
+%   cs4size|c5size 		% 正文字号：小四、五号(默认)
+% ]
+
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{paralist}
+
+\begin{document}
+\include{frontmatter/id}
+\include{frontmatter/cover}
+\include{frontmatter/abstract} %% 摘要
+\include{frontmatter/table}
+\include{frontmatter/symbol} % 主要符号、缩略词对照表
+
+
+\mainmatter	% 使用阿拉伯数字对正文编号
+
+%% 正文内容
+\include{main/chapter01}
+\include{main/chapter02}
+\include{main/chapter03}
+\include{main/conclusion}
+
+
+%\include{app/appendix}
+%\include{app/app_log}
+
+
+
+\backmatter	% 文后无编号部分 
+
+%% 参考资料
+
+\bibliography{bib/preference}
+
+
+
+
+%% 致谢、发表论文、参与项目、简历
+\include{backmatter/ack} 	%% 致谢
+\include{backmatter/pub}	%% 发表论文
+%\include{backmatter/projects}  %% 参与的项目
+% \include{backmatter/resume}
+
+\end{document}
