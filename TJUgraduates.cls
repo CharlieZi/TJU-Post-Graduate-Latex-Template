@@ -237,7 +237,7 @@
 }
 
 %  参考文献风格 GBT7714-2005
-\bibliographystyle{bst/GBT7714-2005NLang}
+\bibliographystyle{bst/GBT7714-2005NLang-TJU}
 
 %==========
 % Segment 4. Draw the TJUgraduates
