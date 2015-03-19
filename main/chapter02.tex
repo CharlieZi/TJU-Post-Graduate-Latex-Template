@@ -5,6 +5,32 @@
 %% Encoding: UTF-8
 %%==================================================
 
-\chapter{test}
-\section{引~言}
+\chapter{论文主要内容实例}
+
+
+
+\section{图}
+
+题注效果如图\ref{fig:placeholder}所示，
+
+\begin{lstlisting}[language=tex, label=lst:helloworld, caption=Helloworld, numbers=left, basicstyle=\ttfamily]
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.5\linewidth]{figure/placeholder}
+\fcaption{中文标题}{英文标题}[目录标题]
+\label{fig:placeholder}
+\end{figure}
+
+\end{lstlisting}
+
+
+\begin{figure*}[!htbp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figure/placeholder}
+	\fcaption{中文标题}{英文标题}[目录标题]
+	\label{fig:placeholder}
+\end{figure*}
+
+\section{表}
 

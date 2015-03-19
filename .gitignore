@@ -1,0 +1,16 @@
+
+*.aux
+
+*.lof
+
+*.lot
+
+*.toc
+
+*.gz
+
+*.pdf
+
+*.out
+
+*.log

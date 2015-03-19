@@ -153,6 +153,28 @@
 \captionnamefont{\songti\zihao{5}}
 \captiontitlefont{\songti\zihao{5}}
 
+%中英文caption标注
+\renewcommand{\bicaption}[4]{%
+	\@if@contemptyarg{#1}{\caption{#2}}{\caption[#1]{#2}}
+	\setlength{\abovecaptionskip}{1pt}
+	\setlength{\belowcaptionskip}{6pt}
+	\edef\@conttempc{#3}
+	\expandafter \renewcommand \csname \@captype name\endcsname{\@conttempc}
+	\@contmidbi
+	\contcaption{#4}}
+%中英文\bicaption modified to \fcaption for Figure
+\newcommand{\fcaption}[2]{%
+	\@ifnextchar[{\fcaption@i{#1}{#2}}{\fcaption@i{#1}{#2}[{#1}]}%
+}\def\fcaption@i#1#2[#3]{\bicaption{#3}{#1}{Fig}{#2}}
+%中英文\bicaption modified to \tcaption for Table
+\newcommand{\tcaption}[2]{%
+	\@ifnextchar[{\tcaption@i{#1}{#2}}{\tcaption@i{#1}{#2}[{#1}]}%
+}\def\tcaption@i#1#2[#3]{\bicaption{#3}{#1}{Table}{#2}}
+
+
+
+
+
 % Floating parameters
 \renewcommand{\textfraction}{0.15}
 \renewcommand{\topfraction}{0.85}
