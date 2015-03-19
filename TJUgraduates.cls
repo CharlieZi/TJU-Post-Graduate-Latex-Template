@@ -353,6 +353,7 @@
 \newcommand\englishfaculty[1]{\def\tju@value@englishfaculty{#1}}
 \newcommand\englishdiscipline[1]{\def\tju@value@englishdiscipline{#1}}
 
+\newcommand\resume[1]{\def\tju@value@resume{#1}}
 
 
 
@@ -571,34 +572,12 @@
 	      \endlist}
 
     
-%\newenvironment{publications}[1]
-%     {\chapter{\tju@label@publications}%
-%      \@mkboth{\MakeUppercase\tju@label@publications}
-%              {\MakeUppercase\tju@label@publications}%
-%      {
-%      	\list{\@biblabel{\@arabic\c@enumiv}}%
-%           {\settowidth\labelwidth{\@biblabel{#1}}%
-%            \leftmargin\labelwidth
-%            \advance\leftmargin\labelsep
-%            \@openbib@code
-%            \usecounter{enumiv}%
-%            \let\p@enumiv\@empty
-%            \renewcommand\theenumiv{\@arabic\c@enumiv}}
-%        }%
-%      \sloppy
-%      \clubpenalty4000
-%      \@clubpenalty \clubpenalty
-%      \widowpenalty4000%
-%      \sfcode`\.\@m}
-%     {\def\@noitemerr
-%       {\@latex@warning{Empty `publications' environment}}%
-%      \endlist}
     
     \newenvironment{publications}[1]
     {\chapter{\tju@label@publications}%
     	\@mkboth{\MakeUppercase\tju@label@publications}
     	{\MakeUppercase\tju@label@publications}%
-    	{\textbf{已发表论文\LARGE}}
+    	{\backsection{已发表论文}}
     	\list{\@biblabel{\@arabic\c@enumiv}}%
     	{\settowidth\labelwidth{\@biblabel{#1}}%
     		\leftmargin\labelwidth
@@ -614,7 +593,9 @@
     	\sfcode`\.\@m}
     {\def\@noitemerr
     	{\@latex@warning{Empty `publications' environment}}%
-    	\endlist}
+    	\endlist
+    	{\backsection{\hspace{-2em}已发表论文}}
+    	\hspace{-2em}\tju@value@resume}
     
     
 
@@ -639,9 +620,9 @@
        {\@latex@warning{Empty `projects' environment}}%
       \endlist}
     
-    \newenvironment{resume}
-  {\chapter{\tju@label@resume}}
-  {}
+%    \newenvironment{resume}
+%  {\chapter{\tju@label@resume}}
+%  {}
   
 \newenvironment{resumesection}[1]
   {{\noindent\normalfont\bfseries #1}
