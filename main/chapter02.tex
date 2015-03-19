@@ -13,7 +13,7 @@
 
 题注效果如图\ref{fig:placeholder}所示，
 
-\begin{lstlisting}[language=tex, label=lst:helloworld, caption=Helloworld, numbers=left, basicstyle=\ttfamily]
+\begin{lstlisting}[language=tex, label=lst:helloworld, caption=图-题注代码, numbers=left, basicstyle=\ttfamily]
 
 \begin{figure}[!htbp]
 \centering
@@ -33,4 +33,28 @@
 \end{figure*}
 
 \section{表}
+
+如表\ref{tab:table-example}所示，
+
+
+\begin{table}[!htbp]
+	\centering
+	\tcaption{中文表标题}{引文表标题}[目录表标题]
+	\label{tab:strength-of-hose}
+	\begin{tabular}{@{\extracolsep{\fill}}>{\hspace{0.5cm}}clcccc}
+		\toprule
+		序号 &    规格     & \tabincell{c}{编织形式\\/mm×根 }& \tabincell{c}{实际\\爆破值/MPa }& \tabincell{c}{计算\\爆破值/MPa}& \tabincell{c}{偏差\\百分比}  \\ \midrule
+		1  & Φ5（10.5MPa）  & Φ0.2×6  &   96.4    & 96.7          & 0.31\% \\
+		2  & Φ8（10.5MPa）  & Φ0.3×5  &   83.5    & 83          & -0.60\% \\
+		3  & Φ12（10.5MPa） & Φ0.3×6  &   63.5    & 66          & 3.94\%  \\
+		4  & Φ16（5.0MPa）  & Φ0.3×6  &   47.1    & 51          & 8.28\% \\ \bottomrule
+	\end{tabular} 
+\end{table}  
+
+
+
+
+
+
+
 
